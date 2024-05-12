@@ -7,6 +7,7 @@
 Run the Vite dev server:
 
 ```shellscript
+cd test-cognita
 npm run dev
 ```
 

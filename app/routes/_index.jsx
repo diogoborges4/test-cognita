@@ -1,15 +1,10 @@
-import type { MetaFunction } from "@remix-run/node";
+import { useNavigate } from "@remix-run/react";
+import "../tailwind.css";
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ];
-};
-
-export default function Index() {
+export default function Home() {
+  const navigate = useNavigate();
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+    <div className="bg-blue-300 p-4">
       <h1>Welcome to Remix</h1>
       <ul>
         <li>
@@ -34,6 +29,9 @@ export default function Index() {
           <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
             Remix Docs
           </a>
+        </li>
+        <li>
+          <button onClick={() => navigate("/explore/trail-1")}>Explorer</button>
         </li>
       </ul>
     </div>
